@@ -1,0 +1,8 @@
+# Automatic Obfuscation example using Base64 encoding
+import base64
+
+# The encrypted payload below contains the original factorial code
+_code = b'ZGVmIGNhbGN1bGF0ZV9mYWN0b3JpYWwobnVtYmVyKToKICAgIGlmIG51bWJlciA9PSAxOgogICAgICAgIHJldHVybiAxCiAgICBlbHNlOgogICAgICAgIHJldHVybiBudW1iZXIgKiBjYWxjdWxhdGVfZmFjdG9yaWFsKG51bWJlciAtIDEpCgpSID0gY2FsY3VsYXRlX2ZhY3RvcmlhbCg1KQpwcmludChmIlRoZSBmYWN0b3JpYWwgaXM6IHtSfSIp'
+
+# The execution wrapper
+exec(base64.b64decode(_code))
